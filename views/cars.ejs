@@ -1,42 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+<head>
 
-  </body>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+
+</body>
 </html>
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-  <title>Hello, world!</title>
+    <title>Hello, world!</title>
 </head>
 <body>
 <%- include nav %>
 
-<form method="post" action="/hotro" enctype="application/x-www-form-urlencoded">
+<form method="post" action="/car" enctype="application/x-www-form-urlencoded">
 
+    <input name="maXe" placeholder="nhập mã xe">
+    <input name="giaXe" placeholder="nhập Giá Xe">
+    <button type="submit">save</button>
 
-    <input name="email" placeholder="Nhập Email của bạn">
-  <br/>
-  <input name="sdt" placeholder="Nhập số điện thoại của bạn">
-  <br/>
-    <input name="noidung" placeholder="Nhập nội dung của bạn">
-  <br/>
-  <button type="submit">save</button>
 
 
 </form>
-<div> <%= message %> </div>
+
 <!-- Optional JavaScript; choose one of the two! -->
 
 <!-- Option 1: Bootstrap Bundle with Popper -->

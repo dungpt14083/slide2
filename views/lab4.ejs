@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
@@ -22,21 +22,31 @@
 </head>
 <body>
 <%- include nav %>
+<div class="container">
+  <h1>Lab 4</h1>
+ <div class="row mb-5">
 
-<form method="post" action="/hotro" enctype="application/x-www-form-urlencoded">
+   <% for(const phantu of datalab4){%>
 
+     <% const src = phantu.url%>
+   <% const ma = phantu.id%>
+   <% const content = phantu.title %>
+   <div class="col-3 mt-5">
+     <div class="card" style="...">
+       <img src="<%=src%>" class="card-img-top" alt="...">
+       <div class="card-body">
+         <h5 class="card-title"><%=ma%></h5>
+         <p class="card-text"><%=content%></p>
+         <a href="#" class="btn btn-secondary">Click Me</a>
+       </div>
+     </div>
 
-    <input name="email" placeholder="Nhập Email của bạn">
-  <br/>
-  <input name="sdt" placeholder="Nhập số điện thoại của bạn">
-  <br/>
-    <input name="noidung" placeholder="Nhập nội dung của bạn">
-  <br/>
-  <button type="submit">save</button>
+   </div>
+   <%} %>
+ </div>
 
+</div>
 
-</form>
-<div> <%= message %> </div>
 <!-- Optional JavaScript; choose one of the two! -->
 
 <!-- Option 1: Bootstrap Bundle with Popper -->

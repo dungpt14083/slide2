@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
@@ -22,21 +22,16 @@
 </head>
 <body>
 <%- include nav %>
+<div class="container">
+  <h1>Đăng Ký thông tin</h1>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="avatar">
+    <button class="btn btn-danger">save</button>
+  </form>
+  <%= message %>
 
-<form method="post" action="/hotro" enctype="application/x-www-form-urlencoded">
+</div>
 
-
-    <input name="email" placeholder="Nhập Email của bạn">
-  <br/>
-  <input name="sdt" placeholder="Nhập số điện thoại của bạn">
-  <br/>
-    <input name="noidung" placeholder="Nhập nội dung của bạn">
-  <br/>
-  <button type="submit">save</button>
-
-
-</form>
-<div> <%= message %> </div>
 <!-- Optional JavaScript; choose one of the two! -->
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
