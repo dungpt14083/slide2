@@ -85,6 +85,13 @@ router.get('/car',function (reg,res){
     res.render('cars',{dulieu:data})
   })
 })
+router.get('/getall',function (reg,res) {
+  danhSach.find({},function (err,data) {
+    res.send(data)
+
+  })
+
+})
 var carSchena = new mongoose.Schema(
     {
       maXe:'string',
